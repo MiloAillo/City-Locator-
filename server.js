@@ -31,3 +31,5 @@ app.get('/request', (req, res) => {
         }
     }
 });
+
+module.exports = app;
