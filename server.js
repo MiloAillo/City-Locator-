@@ -1,11 +1,15 @@
-const express = require('express');
+import express from 'express';
 const app = express()
-require('dotenv').config()
-const fetch = require("node-fetch");
+import dotenv from 'dotenv';
+import fetch from 'node-fetch';
 const port = process.env.PORT || '3000'
 app.listen(port, () => console.log(`listening to port ${port}`));
 
-const path = require('path');
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+import path from 'path';
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
@@ -37,4 +41,4 @@ app.get('/request', (req, res) => {
     }
 });
 
-module.exports = app;
+export default app;
