@@ -1,28 +1,28 @@
-const express = require('express');
+import express from 'express';
+import dotenv from 'dotenv';
+import fetch from 'node-fetch';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
 const app = express()
-require('dotenv').config()
-const fetch = require("node-fetch");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const port = process.env.PORT || '3000'
 app.listen(port, () => console.log(`listening to port ${port}`));
-
-const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-
-const data = []
 
 app.get('/request', (req, res) => {
     console.log('client-side request arrived!')
     const city = req.query.city;
     console.log(city);
-    data.push(city)
     const value = encodeURIComponent(city)
     const url = `http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=1&appid=${process.env.API_KEY}`
     getWeather(url)
-    console.log("current database: " + data);
 
     async function getWeather(url) {
         try {
@@ -37,4 +37,4 @@ app.get('/request', (req, res) => {
     }
 });
 
-module.exports = app;
+export default app;

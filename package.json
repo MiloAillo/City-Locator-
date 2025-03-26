@@ -1,6 +1,7 @@
 {
   "name": "api",
   "version": "1.0.0",
+  "type": "module",
   "description": "A city locator based on OpenWeather API",
   "main": "main.js",
   "scripts": {
@@ -16,7 +17,8 @@
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "node-fetch": "^3.3.2",
     "nodemon": "^3.1.9",
-    "node-fetch": "^2.7.0"
+    "punycode": "^2.3.1"
   }
 }
