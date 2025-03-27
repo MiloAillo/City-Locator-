@@ -4,41 +4,67 @@ body {
 
 h3 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
+    text-align: center;
+    font-size: 23px;
 }
 
 #center {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.123);
     height: 100vh;
+    gap: 10px;
 }
 
 .parent {
-    scale: 1.190;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.322);
-    padding: 20px 40px;
-    min-width: 200px;
+    min-width: 400px;
     border-radius: 15px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.071);
-    transition: scale 0.3s ease;
 }
 
-.parent:hover {
-    scale: 1.2;
-}
-
-#button {
+#menu {
+    height: 40px;
+    width: 100%;
     display: flex;
-    align-items: center;
+}
+
+#menu > div {
+    flex: 1;
+    display: flex;
     justify-content: center;
-    flex-direction: column;
-    transition: all 0.5s ease;
+    align-items: center;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.204);
+
+}
+
+#buttonByCity {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 15px 0 0 0;
+}
+
+#buttonByLang {
+    background-color: rgba(29, 29, 29, 0.184);
+    box-shadow: 0 -1px 0px 0 rgba(0, 0, 0, 0.204) inset;
+    color: rgba(0, 0, 0, 0.387);
+}
+
+#buttonByZip {
+    background-color:  rgba(29, 29, 29, 0.184);
+    box-shadow: 0 -1px 0px 0 rgba(0, 0, 0, 0.204) inset;
+    color: rgba(0, 0, 0, 0.387);
+    border-radius: 0 15px 0 0;
+}
+
+#byCity {
+    width: 80%;
 }
 
 input {
@@ -50,26 +76,41 @@ input {
     box-shadow: 1px 1px inset rgba(0, 0, 0, 0.162);
 }
 
-button {
-    border: 0.5px solid rgba(0, 0, 0, 0.153);
-    background-color: rgba(255, 255, 255, 0.578);
+#wrapButton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#wrapButton > div {
+    flex: 1;    
+    display: flex;
+}
+
+#wrapButton button {
+    width: 89%;
+    height: 30px;
     border-radius: 5px;
-    padding: 2px 14px;
-    transition: all 0.5s ease;
-    display: block;
+    background-color: rgba(244, 250, 255, 0.478);
+    border: solid 0.5px rgba(0, 0, 0, 0.048);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
 }
 
-button:hover {
-    background: linear-gradient(45deg, rgb(0, 149, 255), rgb(0, 255, 229));
-    scale: 1.03;
+#wrapButtonLocate {
+    justify-content: right;
 }
 
-.loadingio-spinner-rolling-nq4q5u6dq7r {
-    scale: 0.13;
-    margin-top: -110px;
-    margin-bottom: -87px;
+#wrapButtonGeolocate {
+    justify-content: left;
 }
 
-.ldio-x2uulkbinbj div {
-    display: none;
+#map {
+    height: 373px;
+    width: 400px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.322);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.071);
 }

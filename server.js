@@ -21,7 +21,7 @@ app.get('/request', (req, res) => {
     const city = req.query.city;
     console.log(city);
     const value = encodeURIComponent(city)
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=1&appid=${process.env.API_KEY}`
+    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=1&appid=b4a8208e98a19ed3ae422d777f0cf500`
     getWeather(url)
 
     async function getWeather(url) {
@@ -36,5 +36,4 @@ app.get('/request', (req, res) => {
         }
     }
 });
-
 export default app;
