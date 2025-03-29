@@ -127,10 +127,6 @@ input {
 }
 
 @media (max-width: 450px) {
-    #center {
-        ;
-    }
-
     .parent {
         min-width: none;
         width: 100vw;
