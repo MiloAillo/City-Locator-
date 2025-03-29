@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.get('/request', (req, res) => {
+app.get('/reqbycity', (req, res) => {
     console.log('client-side request arrived!')
     const city = req.query.city;
     console.log(city);
@@ -36,4 +36,25 @@ app.get('/request', (req, res) => {
         }
     }
 });
+
+app.get('/reqbycoor', (req, res) => {
+    console.log('client-side request arrived!')
+    const lat = req.query.lat;
+    const lon = req.query.lon;
+    console.log(lat, lon);
+    const url = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=b4a8208e98a19ed3ae422d777f0cf500`
+    getLocation(url)
+
+    async function getLocation(url) {
+        try {
+            const response = await fetch(url)
+            const json = await response.json()
+            res.send(json)
+            console.log('success response has been sent to client')
+        } catch (error) {
+            console.error(error)
+            console.log('error response has been sent to client')
+        }
+    }
+})
 export default app;

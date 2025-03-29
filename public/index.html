@@ -20,20 +20,36 @@
       <div id="menu">
         <div id="buttonByCity"><p>By City</p></div>
         <div id="buttonByLang"><p>By Coordinate</p></div>
-        <div id="buttonByZip"><p>By Zip Code</p></div>
       </div>
 
       <div id="byCity">
         <div class="child" id="tittle">
-          <h3>City Locator</h3>
+          <h3>Lokate: City</h3>
         </div>
         <div class="child" id="main">
-          <input type="text" id="input" placeholder="enter a city">
-          <p id="test">Name: <span id="name"></span></p>
-          <p>Country: <span id="country"></span></p>
-          <p>State: <span id="state"></span></p>
-          <p>Latitude: <span id="latitude"></span></p>
-          <p>Longitude: <span id="longitude"></span></p>
+          <input type="text" id="cityInput" placeholder="enter a city">
+          <p id="test">Name: <span id="cityName"></span></p>
+          <p>Country: <span id="cityCountry"></span></p>
+          <p>State: <span id="cityState"></span></p>
+          <p>Latitude: <span id="cityLatitude"></span></p>
+          <p>Longitude: <span id="cityLongitude"></span></p>
+        </div>
+      </div>
+
+      <div id="byLang">
+        <div class="child" id="tittle">
+          <h3>Lokate: Coordinate</h3>
+        </div>
+        <div class="child" id="main">
+          <div id="wrapInputLang">
+            <input type="number" id="inputLat" class="input" placeholder="enter a latitude">
+            <input type="number" id="inputLon" class="input" placeholder="enter a longitude">
+          </div>
+          <p id="test">Name: <span id="coorName"></span></p>
+          <p>Country: <span id="coorCountry"></span></p>
+          <p>State: <span id="coorState"></span></p>
+          <p>Latitude: <span id="coorLatitude"></span></p>
+          <p>Longitude: <span id="coorLongitude"></span></p>
         </div>
       </div>
       
@@ -49,10 +65,6 @@
     
     <div id="map"></div>
   </div>
-
-<!-- Geolocate Self : Experimental-->
-
- <p id="geoResult"></p>
 
   <script src="main.js"></script>
 </body>

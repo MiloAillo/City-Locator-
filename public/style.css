@@ -51,20 +51,18 @@ h3 {
 }
 
 #buttonByLang {
-    background-color: rgba(29, 29, 29, 0.184);
-    box-shadow: 0 -1px 0px 0 rgba(0, 0, 0, 0.204) inset;
-    color: rgba(0, 0, 0, 0.387);
-}
-
-#buttonByZip {
     background-color:  rgba(29, 29, 29, 0.184);
     box-shadow: 0 -1px 0px 0 rgba(0, 0, 0, 0.204) inset;
     color: rgba(0, 0, 0, 0.387);
     border-radius: 0 15px 0 0;
 }
 
-#byCity {
+#byCity, #byLang {
     width: 80%;
+}
+
+#byLang {
+    display: none;
 }
 
 input {
@@ -74,6 +72,13 @@ input {
     border-radius: 3px;
     padding: 3px;
     box-shadow: 1px 1px inset rgba(0, 0, 0, 0.162);
+}
+
+#wrapInputLang {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 7px;
 }
 
 #wrapButton {
