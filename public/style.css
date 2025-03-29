@@ -1,6 +1,5 @@
 body {
     background: linear-gradient(to right, rgb(221, 0, 255), rgb(153, 0, 255));
-}
 
 h3 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -118,4 +117,10 @@ input {
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.322);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.071);
+}
+
+@media (max-width: 750px) {
+    #center {
+        flex-direction: column;
+    }
 }
