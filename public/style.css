@@ -1,5 +1,6 @@
 body {
     background: linear-gradient(to right, rgb(221, 0, 255), rgb(153, 0, 255));
+}
 
 h3 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -12,7 +13,6 @@ h3 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.123);
     height: 100vh;
     gap: 10px;
 }
@@ -117,10 +117,25 @@ input {
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.322);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.071);
+    min-height: 300px;
 }
 
 @media (max-width: 750px) {
     #center {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 450px) {
+    #center {
+        ;
+    }
+
+    .parent {
+        min-width: none;
+        width: 100vw;
+    }
+    #map {
+        width: 100vw;
     }
 }
